@@ -21,11 +21,14 @@ for (let i = 1; i < biciclette.length; i++) {
 
   if (bici.peso < bici_leggera.peso) {
     bici_leggera = bici;
-    //const biciEl = document.getElementById("bicileggera");
-    //biciEl.innerText = `${bici_leggera}`;
+    const biciEl = document.getElementById("bicileggera");
+    biciEl.innerText = `${bici_leggera.nome} che pesa solo ${bici_leggera.peso} gr`;
   }
 }
+
+const esito = bici_leggera;
 console.log(bici_leggera);
+console.log(esito);
 
 /*
 Creare un array di oggetti di squadre di calcio.
@@ -54,4 +57,15 @@ for (let i = 0; i < squadre.length; i++) {
   squadra_singola.falli_subiti = getRandomNumber(0, 10);
 }
 
-console.log(squadre);
+const falli_squadra = [];
+
+for (let i = 0; i < squadre.length; i++) {
+  const squadra_singola = squadre[i];
+
+  falli_squadra.push({
+    nome: squadra_singola.nome,
+    falli_subiti: squadra_singola.falli_subiti,
+  });
+}
+
+console.log(falli_squadra);
