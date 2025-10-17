@@ -21,6 +21,8 @@ for (let i = 1; i < biciclette.length; i++) {
 
   if (bici.peso < bici_leggera.peso) {
     bici_leggera = bici;
+    //const biciEl = document.getElementById("bicileggera");
+    //biciEl.innerText = `${bici_leggera}`;
   }
 }
 console.log(bici_leggera);
@@ -42,6 +44,14 @@ const squadre = [
 ];
 
 //importo in pagina la function presa da w3shool
-function getRndInteger(min, max) {
+function getRandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
+
+for (let i = 0; i < squadre.length; i++) {
+  const squadra_singola = squadre[i];
+  squadra_singola.punti = getRandomNumber(0, 10);
+  squadra_singola.falli_subiti = getRandomNumber(0, 10);
+}
+
+console.log(squadre);
