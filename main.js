@@ -40,3 +40,8 @@ const squadre = [
   { nome: "ultima del campionato f.c.", punti: 0, falli_subiti: 0 },
   { nome: "blue lock f.c.", punti: 0, falli_subiti: 0 },
 ];
+
+//importo in pagina la function presa da w3shool
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
